@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-後端將在 `http://localhost:5000` 運行
+後端將在 `http://localhost:5050` 運行（如 macOS，避免 5000 port 被 AirTunes 佔用）
 
 ### 2. 啟動前端服務
 
