@@ -3,7 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5050; // 避免被 macOS AirTunes 佔用 5000 port
 
 // 中介軟體
 // 只允許來自 http://localhost:3000 的跨域請求
@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/users', (req, res) => {
+  console.log('收到 /api/users 請求'); // 除錯用，確認有進到這個 handler
   const users = [
     { id: 1, name: 'Alice', email: 'alice@example.com' },
     { id: 2, name: 'Bob', email: 'bob@example.com' },

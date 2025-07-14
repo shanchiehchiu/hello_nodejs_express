@@ -14,7 +14,7 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const API_URL = 'http://localhost:5000';
+  const API_URL = 'http://localhost:5050'; // 避免被 macOS AirTunes 佔用 5000 port
 
   useEffect(() => {
     fetchUsers();
